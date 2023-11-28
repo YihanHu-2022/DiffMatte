@@ -69,24 +69,6 @@ Quantitative Results on [Composition-1k](https://paperswithcode.com/dataset/comp
 
 ***If you want to download prepared test set directly : [download link](https://drive.google.com/file/d/1fS-uh2Fi0APygd0NPjqfT7jCwUu_a_Xu/view?usp=sharing)** 
 
-### Training on Composition-1k dataset
-1] get corresponding matting specify encoder checkpoint. The two checkpoints related to ViT need to be preprocessed and follow the practices in [ViTMatte](https://github.com/hustvl/ViTMatte/blob/main/pretrained/preprocess.py).
-| Encoder    | checkpoints | config file |
-| ---------- | ----------- | ----------- |
-| Res34 | [ResNet34_En_nomixup](https://drive.google.com/open?id=1kNj33D7x7tR-5hXOvxO53QeCEC8ih3-A) | ./configs/res34.py |
-| SwinT | [Swin-Tiny](https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_tiny_patch4_window7_224.pth) | ./configs/swin_t.py |
-| ViTS | [DINO-pretrained ViT-Small](https://dl.fbaipublicfiles.com/dino/dino_deitsmall16_pretrain/dino_deitsmall16_pretrain.pth) | ./configs/ViTS.py |
-| ViTB | [MAE-pretrained ViT-Base](https://dl.fbaipublicfiles.com/mae/pretrain/mae_pretrain_vit_base.pth) | ./configs/ViTB.py |
-
-2] modify corresponding config file
-
-3] run main.py
-```
-python main.py \
-    --config-file configs/CONFIG.py \
-    --num-gpus 2
-```
-
 ### Testing on Composition-1k dataset
 
 1] Run inference code (the predicted alpha will be save to **./predDIM/pred_alpha** by default)
