@@ -73,7 +73,7 @@ Quantitative Results on [Composition-1k](https://paperswithcode.com/dataset/comp
 ***If you want to download prepared test set directly : [download link](https://drive.google.com/file/d/1fS-uh2Fi0APygd0NPjqfT7jCwUu_a_Xu/view?usp=sharing)** 
 
 ### Training on Composition-1k dataset
-1] get corresponding matting specify encoder checkpoint.
+1] get corresponding matting specify encoder checkpoint. The two checkpoints related to ViT need to be preprocessed and follow the practices in [ViTMatte](https://github.com/hustvl/ViTMatte/blob/main/pretrained/preprocess.py).
 | Encoder    | checkpoints | config file |
 | ---------- | ----------- | ----------- |
 | Res34 | [ResNet34_En_nomixup](https://drive.google.com/open?id=1kNj33D7x7tR-5hXOvxO53QeCEC8ih3-A) | ./configs/res34.py |
