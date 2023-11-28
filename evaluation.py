@@ -65,71 +65,11 @@ def evaluate(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--pred-dir', type=str, default='/home/yihan.hu/workdir/DiffusionMattingV2/predDIM_S/noise_1step_linear1_mat')
-    parser.add_argument('--label-dir', type=str, default='/weka/users/yihan.hu/Matting/Composition-1k-testset/alpha_copy', help="/weka/users/yihan.hu/Matting/Composition-1k-testset/alpha_copy")
-    parser.add_argument('--trimap-dir', type=str, default='/weka/users/yihan.hu/Matting/Composition-1k-testset/trimaps', help="/weka/users/yihan.hu/Matting/Composition-1k-testset/trimaps")
-    parser.add_argument('--merged-dir', type=str, default='/weka/users/yihan.hu/Matting/Composition-1k-testset/merged', help="/weka/users/yihan.hu/Matting/Composition-1k-testset/merged")
+    parser.add_argument('--pred-dir', type=str, default='./Pred_Dir')
+    parser.add_argument('--label-dir', type=str, default='/Data_Dir/Composition-1k-testset/alpha_copy')
+    parser.add_argument('--trimap-dir', type=str, default='/Data_Dir/Composition-1k-testset/trimaps')
+    parser.add_argument('--merged-dir', type=str, default='/Data_Dir/Composition-1k-testset/merged')
 
     args = parser.parse_args()
 
     evaluate(args)
-
-"""
-CUDA_VISIBLE_DEVICES=2 python evaluation.py \
-    --pred-dir /home/yihan.hu/workdir/DiffusionMattingV2/predDIM/SIMD/ddim1/base_x0_linear0.2_mm_sa_stage2only_lr5_long/model_0215487.pth \
-    --label-dir /weka/users/yihan.hu/Matting/SIMD/Test/alpha \
-    --trimap-dir /weka/users/yihan.hu/Matting/SIMD/Test/trimaps
-
-CUDA_VISIBLE_DEVICES=2 python evaluation.py \
-    --pred-dir /home/yihan.hu/workdir/DiffusionMattingV2/predDIM/D646/ddim10/res34_x0_linear0.2_mm_sa_stage2only_lr_bs/model_final.pth \
-    --label-dir /weka/users/yihan.hu/Matting/D646/Test/GT \
-    --trimap-dir /weka/users/yihan.hu/Matting/D646/Test/trimaps
-
-CUDA_VISIBLE_DEVICES=2 python evaluation.py \
-    --pred-dir /home/yihan.hu/workdir/DiffusionMattingV2/predDIM/D646/ddim1/res34_x0_linear0.2_mm_sa_stage2only_lr_bs/model_final.pth \
-    --label-dir /weka/users/yihan.hu/Matting/D646/Test/GT \
-    --trimap-dir /weka/users/yihan.hu/Matting/D646/Test/trimaps
-
-python evaluation.py \
-    --pred-dir /home/yihan.hu/workdir/DiffusionMattingV2/predDIM/D646/ddim10/x0_linear0.2_mm_sa_stage2only/model_0202019.pth \
-    --label-dir /weka/users/yihan.hu/Matting/D646/Test/GT \
-    --trimap-dir /weka/users/yihan.hu/Matting/D646/Test/trimaps
-
-python evaluation.py \
-    --pred-dir /home/yihan.hu/workdir/DiffusionMattingV2/predDIM/D646/ddim10/base_x0_linear0.2_mm_sa_stage2only_lr5_long/model_0215487.pth \
-    --label-dir /weka/users/yihan.hu/Matting/D646/Test/GT \
-    --trimap-dir /weka/users/yihan.hu/Matting/D646/Test/trimaps
-    
-
-CUDA_VISIBLE_DEVICES=0 python evaluation.py \
-    --pred-dir /home/yihan.hu/workdir/DiffusionMattingV2/predD646_S/gca \
-    --label-dir /weka/users/yihan.hu/Matting/D646/Test/GT \
-    --trimap-dir /weka/users/yihan.hu/Matting/D646/Test/trimaps
-
-CUDA_VISIBLE_DEVICES=7 python evaluation.py \
-    --pred-dir /home/yihan.hu/workdir/DiffusionMattingV2/predD646_S/matteformer/pred_alpha \
-    --label-dir /weka/users/yihan.hu/Matting/D646/Test/GT \
-    --trimap-dir /weka/users/yihan.hu/Matting/D646/Test/trimaps
-
-    
-CUDA_VISIBLE_DEVICES=7 python evaluation.py \
-    --pred-dir /home/yihan.hu/workdir/DiffusionMattingV2/predAIM_S/vits_1024 \
-    --label-dir /weka/users/yihan.hu/Matting/AIM-500/alpha_copy \
-    --trimap-dir /weka/users/yihan.hu/Matting/AIM-500/trimaps
-
-CUDA_VISIBLE_DEVICES=2 python evaluation.py \
-    --pred-dir /home/yihan.hu/workdir/DiffusionMattingV2/test_zone/test_result/step_000 \
-    --label-dir /weka/users/yihan.hu/Matting/Composition-1k-testset/alpha_copy \
-    --trimap-dir /weka/users/yihan.hu/Matting/Composition-1k-testset/trimaps
-
-CUDA_VISIBLE_DEVICES=2 python evaluation.py \
-    --pred-dir /home/yihan.hu/workdir/DiffusionMattingV2/test_zone/test_result/step_004 \
-    --label-dir /weka/users/yihan.hu/Matting/Composition-1k-testset/alpha_copy \
-    --trimap-dir /weka/users/yihan.hu/Matting/Composition-1k-testset/trimaps
-
-CUDA_VISIBLE_DEVICES=2 python evaluation.py \
-    --pred-dir /home/yihan.hu/workdir/DiffusionMattingV2/test_zone/test_result/step_005 \
-    --label-dir /weka/users/yihan.hu/Matting/Composition-1k-testset/alpha_copy \
-    --trimap-dir /weka/users/yihan.hu/Matting/Composition-1k-testset/trimaps
-
-"""

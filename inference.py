@@ -1,12 +1,5 @@
 '''
 Inference for Composition-1k Dataset.
-
-Run:
-CUDA_VISIBLE_DEVICES=1 python inference.py \
-    --config-dir configs/res34_x0_linear0.2_mm_sa_stage2only_lr_bs.py \
-    --checkpoint-dir /home/yihan.hu/workdir/DiffusionMattingV2/output_of_train/res34_x0_linear0.2_mm_sa_stage2only_lr_bs/model_final.pth \
-    --inference-dir ./predDIM_S/test \
-    --data-dir /weka/users/yihan.hu/Matting/Composition-1k-testset 
 '''
 import os
 import cv2
@@ -117,26 +110,6 @@ def matting_inference(
             cv2.imwrite(opj(inference_dir, data['image_name'][0]), _al)
             torch.cuda.empty_cache()
 
-'''
-CUDA_VISIBLE_DEVICES=1 python inference.py \
-    --config-dir /home/yihan.hu/workdir/DiffusionMattingV2/configs/swin_t_x0_linear0.2_mm_sa_stage2only_lr_bs.py \
-    --checkpoint-dir /home/yihan.hu/workdir/DiffusionMattingV2/output_of_train/swin_t_x0_linear0.2_mm_sa_stage2only_lr_bs/model_0150849.pth \
-    --inference-dir ./predD646_S/swin \
-    --data-dir /weka/users/yihan.hu/Matting/D646/Test \
-    --sample-strategy "ddim2"
-
-CUDA_VISIBLE_DEVICES=2 python inference.py \
-    --config-dir /home/yihan.hu/workdir/DiffusionMattingV2/configs/gpu4_x0_linear0.2_mm_sa_stage2only_1024_milestones.py \
-    --checkpoint-dir /home/yihan.hu/workdir/DiffusionMattingV2/output_of_train/gpu4_x0_linear0.2_mm_sa_stage2only_1024_milestones/model_0269359.pth \
-    --inference-dir ./predAIM_S/vits_1024 \
-    --data-dir /weka/users/yihan.hu/Matting/AIM-500 \
-    --sample-strategy "ddim10"
-
-
-/home/yihan.hu/learner/diffusion/DiffusionMatting/failure_case_test
-/weka/users/yihan.hu/Matting/Composition-1k-testset
-'''
-
 if __name__ == '__main__':
     #add argument we need:
     parser = default_argument_parser()
@@ -144,7 +117,7 @@ if __name__ == '__main__':
     parser.add_argument('--checkpoint-dir', type=str, required=True)
     parser.add_argument('--inference-dir', type=str, required=True)
     parser.add_argument('--data-dir', type=str, required=True)
-    parser.add_argument('--sample-strategy', type=str, default="ddpm1")
+    parser.add_argument('--sample-strategy', type=str, default="ddim10")
     
     args = parser.parse_args()
     matting_inference(
