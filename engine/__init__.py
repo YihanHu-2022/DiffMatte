@@ -1,2 +1,0 @@
-from .mattingtrainer import MattingTrainer
-from .diffusionmattingtrainer import DiffusionMattingTrainer
