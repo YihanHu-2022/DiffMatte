@@ -94,7 +94,7 @@ CUDA_VISIBLE_DEVICES=3 python evaluation.py \
 
 ## To do list
 - [ ] Run-one-image Demo
-- [ ] Distinctions-646 training scripts
+- [ ] training scripts
 - [ ] DiffMatte V2
 
 ## License
