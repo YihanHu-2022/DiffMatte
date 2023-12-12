@@ -11,8 +11,8 @@ Georgia Tech & Picsart AI Research (PAIR)
     <a href="https://opensource.org/licenses/MIT">
         <img src="https://img.shields.io/badge/License-MIT-yellow.svg"/>
     </a>
-    <a href="https://arxiv.org/pdf/2210.11006.pdf">
-        <img src="https://img.shields.io/badge/arXiv-2102.06583-b31b1b"/>
+    <a href="https://arxiv.org/pdf/2312.05915.pdf">
+        <img src="https://img.shields.io/badge/arxiv-2312.05915-red"/>
     </a>    
 </p>
 </div>
@@ -101,6 +101,14 @@ CUDA_VISIBLE_DEVICES=3 python evaluation.py \
 The code is released under the MIT License. It is a short, permissive software license. Basically, you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source. 
 
 ## Citation
+@misc{hu2023diffusion,
+      title={Diffusion for Natural Image Matting}, 
+      author={Yihan Hu and Yiheng Lin and Wei Wang and Yao Zhao and Yunchao Wei and Humphrey Shi},
+      year={2023},
+      eprint={2312.05915},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
 
 ## Acknowledgement
 Our project is developed based on [ViTMatte](https://github.com/hustvl/ViTMatte), [Matteformer](https://github.com/webtoon/matteformer) and [GCA-Matting](https://github.com/Yaoyi-Li/GCA-Matting). Thanks for their wonderful work!<div align="center">
