@@ -101,6 +101,7 @@ CUDA_VISIBLE_DEVICES=3 python evaluation.py \
 The code is released under the MIT License. It is a short, permissive software license. Basically, you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source. 
 
 ## Citation
+```bibtex
 @misc{hu2023diffusion,
       title={Diffusion for Natural Image Matting}, 
       author={Yihan Hu and Yiheng Lin and Wei Wang and Yao Zhao and Yunchao Wei and Humphrey Shi},
@@ -109,6 +110,7 @@ The code is released under the MIT License. It is a short, permissive software l
       archivePrefix={arXiv},
       primaryClass={cs.CV}
 }
+```
 
 ## Acknowledgement
 Our project is developed based on [ViTMatte](https://github.com/hustvl/ViTMatte), [Matteformer](https://github.com/webtoon/matteformer) and [GCA-Matting](https://github.com/Yaoyi-Li/GCA-Matting). Thanks for their wonderful work!<div align="center">
