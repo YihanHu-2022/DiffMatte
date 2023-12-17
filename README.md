@@ -13,7 +13,10 @@ Georgia Tech & Picsart AI Research (PAIR)
     </a>
     <a href="https://arxiv.org/pdf/2312.05915.pdf">
         <img src="https://img.shields.io/badge/arxiv-2312.05915-red"/>
-    </a>    
+    </a>   
+    <a href="[https://arxiv.org/pdf/2312.05915.pdf](https://paperswithcode.com/sota/image-matting-on-composition-1k-1?p=diffusion-for-natural-image-matting)">
+        <img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/diffusion-for-natural-image-matting/image-matting-on-composition-1k-1"/>
+    </a>  
 </p>
 </div>
 
