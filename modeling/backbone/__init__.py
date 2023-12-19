@@ -1,6 +1,6 @@
 from .backbone import *
 from .vit import ViT
-from .vit_d646 import ViT as ViT_grid
+from .vit_grid import ViT as ViT_grid
 from .res34 import *
 from .swin import *
 from .utils import *
