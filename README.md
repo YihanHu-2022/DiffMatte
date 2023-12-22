@@ -96,7 +96,7 @@ CUDA_VISIBLE_DEVICES=3 python evaluation.py \
 ```
 
 ## To do list
-- [ ] Run-one-image Demo
+- [X] Run-one-image Demo
 - [ ] training scripts
 - [ ] DiffMatte V2
 

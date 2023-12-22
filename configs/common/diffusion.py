@@ -16,7 +16,7 @@ if not uniform_timesteps:
     rescale_timesteps = True
 
     criterion = None
-    inference_mode=False # 无需手动改变，自动传入
+    inference_mode=False # No need to change manually, automatically passed in
 
     diffusion = L(create_gaussian_diffusion)(
             steps=diffusion_steps,
