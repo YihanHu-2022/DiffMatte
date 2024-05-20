@@ -9,7 +9,7 @@ It will be saved in the directory ``./demo``.
 
 If you want to run on your own image, run:
 python run_one_image.py \
-    --config-file ViTS(or ViTB) \
+    --config-file ViTS(or ViTB, must be paired with the config file name in ./configs/xxx.py) \
     --checkpoint-dir <your checkpoint directory> \
     --image-dir <your image directory> \
     --trimap-dir <your trimap directory> \
