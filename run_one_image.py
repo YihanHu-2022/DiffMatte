@@ -3,13 +3,13 @@ It is used to run the model on one image (and its corresponding trimap).
 
 For default, run:
 python run_one_image.py \
-    --model vitmatte-s \
+    --config-file ViTS_1024 \
     --checkpoint-dir path/to/checkpoint
 It will be saved in the directory ``./demo``.
 
 If you want to run on your own image, run:
 python run_one_image.py \
-    --model vitmatte-s(or vitmatte-b) \
+    --config-file ViTS(or ViTB) \
     --checkpoint-dir <your checkpoint directory> \
     --image-dir <your image directory> \
     --trimap-dir <your trimap directory> \
