@@ -16,6 +16,7 @@ python run_one_image.py \
     --output-dir <your output directory> \
     --device <your device>
 """
+import cv2
 from PIL import Image
 from re import findall
 from os.path import join as opj
@@ -33,8 +34,8 @@ def infer_one_image(model, input, save_dir=None):
         trimap: the input trimap
     """
     output = model(input)
-    output = F.to_pil_image(output).convert('RGB')
-    output.save(opj(save_dir))
+    output = cv2.cvtColor(output, cv2.COLOR_GRAY2RGB)
+    cv2.imwrite(opj(save_dir), output)
 
     return None
 
@@ -72,6 +73,11 @@ def get_data(image_dir, trimap_dir):
     image = F.to_tensor(image).unsqueeze(0)
     trimap = Image.open(trimap_dir).convert('L')
     trimap = F.to_tensor(trimap).unsqueeze(0)
+
+    # force tri-values in trimap
+    trimap[trimap > 0.9] = 1.00000
+    trimap[(trimap >= 0.1) & (trimap <= 0.9)] = 0.50000
+    trimap[trimap < 0.1] = 0.00000
 
     return {
         'image': image,
